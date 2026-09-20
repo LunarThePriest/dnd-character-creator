@@ -6,6 +6,105 @@
     <title>D&D Character Creator</title>
 </head>
 <body>
-    
+    <header style="display: flex; height: 70px;">
+        <img src="assets/img/dice.webp" alt="">
+        <h1>D&D Character Creator</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#sources">Learn D&D</a>
+            <a href="#form">Getting started</a>
+        </nav>
+    </header>
+
+    <main>
+        <h3 id="about">What this website is for</h3>
+        <p>This a free character creator for D&D players who don't want to waste time on calculating modifiers and trying to fit all the spells into a tiny box on their character sheet.</p>
+
+        <h3>How do I get started?</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis ipsum culpa quia esse incidunt ratione ex! Excepturi vitae aliquid, asperiores pariatur nam non magni praesentium impedit blanditiis, placeat sint officia!</p>
+        <ol>
+            <li>Click "Getting started"</li>
+            <li>Choose a race and class</li>
+            <li>Customize your character</li>
+            <li>Save as PDF or log in to store your character online</li>
+        </ol>
+
+        <h3>Another paragraph</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A voluptas impedit ducimus ab sed voluptatibus nihil, doloremque velit non blanditiis architecto assumenda reprehenderit enim numquam nostrum alias ad asperiores consectetur.</p>
+
+        <h3>Yet another paragraph</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dicta, nihil provident delectus perferendis unde sit, ea aliquid deserunt mollitia quibusdam rem! Modi, possimus dolore? Nulla odio corporis reprehenderit magnam!</p>
+        <br>
+
+        <h3 id="sources">Free sources to learn D&D:</h3>
+        <ul>
+            <li><a href="https://dnd5e.wikidot.com/" target="_blank">Wikidot</a></li>
+            <li><a href="https://roll20.net/compendium/dnd5e/BookIndex" target="_blank">Roll20</a></li>
+            <li><a href="https://www.dndbeyond.com/sources/dnd/basic-rules-2014" target="_blank">D&D Beyond</a></li>
+            <li><a href="https://www.reddit.com/r/dndnext/" target="_blank" rel="noopener noreferrer">Reddit</a> -- to learn interesting strategies and read about unique cases where the rulebook isn't enough</li>
+        </ul>
+        <br>
+
+        <h3>A random table for some reason</h3>
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Rarity</th>
+                <th>Description</th>
+                <th>Estimated Value</th>
+            </tr>
+            <tr>
+                <td><strong>Everburning Torch</strong></td>
+                <td>Common</td>
+                <td>A metal torch that sheds bright light in a 20-foot radius, but never consumes fuel.</td>
+                <td>50 gp</td>
+            </tr>
+            <tr>
+                <td><strong>Potion of Healing</strong></td>
+                <td>Common</td>
+                <td>A red, viscous liquid that restores 2d4 + 2 hit points when consumed.</td>
+                <td>50 gp</td>
+            </tr>
+            <tr>
+                <td><strong>Bag of Holding</strong></td>
+                <td>Uncommon</td>
+                <td>A cloth sack with an interior space significantly larger than its outside dimensions, weighing only 15 pounds regardless of contents.</td>
+                <td>400 gp</td>
+            </tr>
+            <tr>
+                <td><strong>Spell Scroll (Fireball)</strong></td>
+                <td>Rare</td>
+                <td>A piece of parchment inscribed with arcane runes allowing the reader to cast <em>Fireball</em> once.</td>
+                <td>500 gp</td>
+            </tr>
+        </table>
+        <br>
+
+        <div id="form" style="display: flex; height: 200px;">
+            <form style="display: flex; flex-direction: column;">
+                <div>
+                    <label for="char-name">Character Name:</label>
+                    <input type="text" id="char-name" name="charName" required>
+                </div>
+
+                <div>
+                    <label for="char-class">Class:</label>
+                    <select id="char-class" name="charClass">
+                        <option value="fighter">Fighter</option>
+                        <option value="wizard">Wizard</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="bard">Bard</option>
+                    </select>
+                </div>
+
+                <button type="submit">Create Character</button>
+            </form>
+            <figure>
+                <img src="assets/img/temp.webp" alt="" style="max-height: 100%;">
+                <figcaption>D&D related picture.</figcaption>
+            </figure>
+        </div>
+    </main>
+    <footer></footer>
 </body>
 </html>
