@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>D&D Character Creator</title>
 </head>
 <body>
-    <header style="display: flex; height: 70px;">
-        <img src="assets/img/dice.webp" alt="">
+    <header>
+        <img src="assets/img/dice.png" alt="">
         <h1>D&D Character Creator</h1>
         <nav>
             <a href="#about">About</a>
@@ -34,7 +35,6 @@
 
         <h3>Yet another paragraph</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dicta, nihil provident delectus perferendis unde sit, ea aliquid deserunt mollitia quibusdam rem! Modi, possimus dolore? Nulla odio corporis reprehenderit magnam!</p>
-        <br>
 
         <h3 id="sources">Free sources to learn D&D:</h3>
         <ul>
@@ -43,7 +43,6 @@
             <li><a href="https://www.dndbeyond.com/sources/dnd/basic-rules-2014" target="_blank">D&D Beyond</a></li>
             <li><a href="https://www.reddit.com/r/dndnext/" target="_blank" rel="noopener noreferrer">Reddit</a> -- to learn interesting strategies and read about unique cases where the rulebook isn't enough</li>
         </ul>
-        <br>
 
         <h3>A random table for some reason</h3>
         <table>
@@ -78,10 +77,9 @@
                 <td>500 gp</td>
             </tr>
         </table>
-        <br>
 
-        <div id="form" style="display: flex; height: 200px;">
-            <form style="display: flex; flex-direction: column;">
+        <div id="form">
+            <form>
                 <div>
                     <label for="char-name">Character Name:</label>
                     <input type="text" id="char-name" name="charName" required>
@@ -100,7 +98,7 @@
                 <button type="submit">Create Character</button>
             </form>
             <figure>
-                <img src="assets/img/temp.webp" alt="" style="max-height: 100%;">
+                <img src="assets/img/temp.webp" alt="">
                 <figcaption>D&D related picture.</figcaption>
             </figure>
         </div>
