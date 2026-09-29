@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7f5ff;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+}
+
+h1, h3, p, li {
+  color: #222222ff;
+}
+
+h1 {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3, nav {
+  font-family: "Monomakh", system-ui;
+  font-weight: bold;
+  font-style: normal;
+}
+
+p, li, table {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  height: 70px;
+}
+
+img {
+  max-height: 100%;
+}
+
+#form {
+  display: flex;
+  height: 200px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
