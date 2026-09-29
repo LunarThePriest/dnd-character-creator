@@ -12,17 +12,11 @@ main {
     padding: 1rem 3rem;
 }
 
-h1, h3, p, li {
+h3, p, a {
   color: #222222ff;
 }
 
-h1 {
-  font-family: "Sekuya", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-h3, nav {
+h3 {
   font-family: "Monomakh", system-ui;
   font-weight: bold;
   font-style: normal;
@@ -32,11 +26,6 @@ p, li, table {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-header {
-  display: flex;
-  height: 70px;
 }
 
 img {
