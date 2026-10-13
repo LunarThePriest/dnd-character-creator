@@ -42,18 +42,26 @@ header > img {
 
 .nav-menu {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   font-family: "Monomakh", system-ui;
   font-weight: bold;
   font-style: normal;
 }
 
 .nav-menu > a {
+  display: flex;
+  align-items: center;
   color: #f4f7f5ff;
-  padding: 0.75rem 1.5rem;
+  padding: 0 1.5rem;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.nav-menu > a:hover {
+  color: #222222ff;
+  background-color: #a7a2a9ff;
+  background-clip:inherit;
 }
 
 /* @media (min-width: 768px) {

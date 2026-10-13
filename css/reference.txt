@@ -1,0 +1,50 @@
+320px to 768px for mobile, 768px - 1024px for tablets and from 1024px < desktops
+
+Colors:
+https://coolors.co/222222-a7a2a9-4b4e6d-f4f7f5-618b4a
+
+/* CSS HEX */
+--carbon-black: #222222ff;
+--lilac-ash: #a7a2a9ff;
+--dusty-grape: #4b4e6dff;
+--bright-snow: #f4f7f5ff;
+--fern: #618b4aff;
+
+/* CSS HSL */
+--carbon-black: hsla(0, 0%, 13%, 1);
+--lilac-ash: hsla(283, 4%, 65%, 1);
+--dusty-grape: hsla(235, 18%, 36%, 1);
+--bright-snow: hsla(140, 16%, 96%, 1);
+--fern: hsla(99, 31%, 42%, 1);
+
+/* SCSS HEX */
+$carbon-black: #222222ff;
+$lilac-ash: #a7a2a9ff;
+$dusty-grape: #4b4e6dff;
+$bright-snow: #f4f7f5ff;
+$fern: #618b4aff;
+
+/* SCSS HSL */
+$carbon-black: hsla(0, 0%, 13%, 1);
+$lilac-ash: hsla(283, 4%, 65%, 1);
+$dusty-grape: hsla(235, 18%, 36%, 1);
+$bright-snow: hsla(140, 16%, 96%, 1);
+$fern: hsla(99, 31%, 42%, 1);
+
+/* SCSS RGB */
+$carbon-black: rgba(34, 34, 34, 1);
+$lilac-ash: rgba(167, 162, 169, 1);
+$dusty-grape: rgba(75, 78, 109, 1);
+$bright-snow: rgba(244, 247, 245, 1);
+$fern: rgba(97, 139, 74, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-right: linear-gradient(90deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-bottom: linear-gradient(180deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-left: linear-gradient(270deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-top-right: linear-gradient(45deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-bottom-right: linear-gradient(135deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-top-left: linear-gradient(225deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-bottom-left: linear-gradient(315deg, #222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);
+$gradient-radial: radial-gradient(#222222ff, #a7a2a9ff, #4b4e6dff, #f4f7f5ff, #618b4aff);

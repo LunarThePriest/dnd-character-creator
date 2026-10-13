@@ -4,12 +4,13 @@
 
 body {
   background-color: #f4f7f5ff;
+  margin: 0;
 }
 
 main {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 1rem 3rem;
+    padding: 0 70px;
 }
 
 h3, p, a {
@@ -32,7 +33,32 @@ img {
   max-height: 100%;
 }
 
-#form {
+@media (min-width: 1440px) {
+  .about-and-form {
+    display: flex;
+    gap: 30px;
+  }
+  .about {
+    width: 55%;
+  }
+  form-container {
+    width: 30%;
+  }
+}
+
+.about {
+  margin: 40px 0;
+}
+
+.about > h3 {
+  margin-top: 40px;
+}
+
+#about {
+  margin-top: 0;
+}
+
+.form-container {
   display: flex;
   height: 200px;
 }
@@ -40,4 +66,22 @@ img {
 form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-field {
+  display: flex;
+}
+
+.form-field > label {
+  width: 115px;
+}
+
+.form-field > input {
+  width: auto;
+}
+
+.form-field > select {
+  width: 100%;
 }
