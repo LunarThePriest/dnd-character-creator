@@ -111,3 +111,24 @@ button[type="submit"] {
   cursor: pointer;
   transition: background-color 0.15s;
 }
+
+table {
+  table-layout: fixed;
+  overflow-x: auto;
+  display: block;
+}
+
+@media (min-width: 480px) {
+  table {
+    display: inline;
+  }
+}
+
+td {
+  text-overflow: ellipsis; 
+  word-wrap: break-word;
+}
+
+.dnd-picture img {
+  max-width: 100%;
+}
