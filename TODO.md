@@ -1,7 +1,7 @@
 ## Urgent for lab:
 - [x] hover effect for nav buttons - change background-color
-- [ ] hamburger menu for mobile!!
-- [ ] fix the form
+- [x] hamburger menu for mobile!!
+- [x] fix the form
 - [ ] table (maybe remove it altogether? or repurpose it for the character sheet somehow)
 - [ ] do smth with the image
 

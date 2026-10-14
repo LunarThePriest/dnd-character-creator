@@ -1,9 +1,11 @@
+@import "colors.css";
+
 * {
     box-sizing: border-box;
 }
 
 body {
-  background-color: #f4f7f5ff;
+  background-color: var(--bright-snow);
   margin: 0;
 }
 
@@ -14,10 +16,10 @@ main {
 }
 
 h3, p, a {
-  color: #222222ff;
+  color: var(--carbon-black);
 }
 
-h3 {
+h3, form {
   font-family: "Monomakh", system-ui;
   font-weight: bold;
   font-style: normal;
@@ -33,55 +35,79 @@ img {
   max-height: 100%;
 }
 
-@media (min-width: 1440px) {
+.about-and-form {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 0;
+}
+
+@media (min-width: 900px) {
   .about-and-form {
-    display: flex;
-    gap: 30px;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: start;
+    padding: 3rem 2rem 4rem;
   }
-  .about {
-    width: 55%;
+ 
+  .form-container {
+    position: sticky;
+    top: 1.5rem;
   }
-  form-container {
-    width: 30%;
-  }
-}
-
-.about {
-  margin: 40px 0;
-}
-
-.about > h3 {
-  margin-top: 40px;
-}
-
-#about {
-  margin-top: 0;
 }
 
 .form-container {
-  display: flex;
-  height: 200px;
+  background: var(--bright-snow);
+  border: 1px solid var(--carbon-black);
+  border-top: 4px solid var(--fern);
+  border-radius: 8px;
+  padding: 1.25rem;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
+ 
+@media (min-width: 600px) {
+  .form-container {
+    padding: 1.75rem;
+  }
 }
-
+ 
 .form-field {
   display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
 }
-
-.form-field > label {
-  width: 115px;
+ 
+.form-field label {
+  font-weight: 600;
+  font-size: 0.95rem;
 }
-
-.form-field > input {
-  width: auto;
-}
-
-.form-field > select {
+ 
+.form-field input,
+.form-field select {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
   width: 100%;
+  min-height: 48px;
+  padding: 0.6rem 0.8rem;
+  color: var(--carbon-black);
+  background: var(--bright-snow);
+  border: 1px solid var(--carbon-black);
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--bright-snow);
+  background: var(--dusty-grape);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s;
 }
