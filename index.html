@@ -102,32 +102,42 @@
           </ul>
         </section>
 
-        <div id="form" class="form-container">
-          <form>
+        <div class="form-container">
+          <form id="form">
             <div class="form-field">
               <label for="char-name">Character Name:</label>
-              <input type="text" id="char-name" name="charName" required />
+              <input type="text" id="char-name" name="charName" placeholder="Enter a name" required />
             </div>
 
             <div class="form-field">
               <label for="char-race">Race:</label>
               <select id="char-race" name="charRace">
-                <option value="human">Human</option>
-                <option value="elf">Elf</option>
-                <option value="dwarf">Dwarf</option>
-                <option value="tiefling">Tiefling</option>
+                <option value="" disabled selected hidden>Choose</option>
+                <option value="Human">Human</option>
+                <option value="Elf">Elf</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Tiefling">Tiefling</option>
               </select>
             </div>
 
             <div class="form-field">
               <label for="char-class">Class:</label>
               <select id="char-class" name="charClass">
-                <option value="fighter">Fighter</option>
-                <option value="wizard">Wizard</option>
-                <option value="rogue">Rogue</option>
-                <option value="bard">Bard</option>
+                <option value="" disabled selected hidden>Choose</option>
+                <option value="Fighter">Fighter</option>
+                <option value="Wizard">Wizard</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Bard">Bard</option>
+                <option value="Druid">Druid</option>
+                <option value="Monk">Monk</option>
               </select>
             </div>
+
+            <div class="form-field">
+              <label for="char-level">Character Level:</label>
+              <input type="text" id="char-level" name="charLevel" value="1" required />
+            </div>
+            <p id="message"></p>
 
             <button type="submit">Create Character</button>
           </form>
@@ -135,46 +145,48 @@
       </container>
 
       <h3>Your characters</h3>
-      <table>
-        <tr>
-          <th>Character Name</th>
-          <th>Race</th>
-          <th>Class</th>
-          <th>Level</th>
-        </tr>
-        <tr>
-          <td><strong>Sara</strong></td>
-          <td>Human</td>
-          <td>
-            Monk (Way of the Drunken Master)
-          </td>
-          <td>Lvl 2</td>
-        </tr>
-        <tr>
-          <td><strong>Ivor</strong></td>
-          <td>Human</td>
-          <td>
-            Druid (Circle of the Shepherd)
-          </td>
-          <td>Lvl 2</td>
-        </tr>
-        <tr>
-          <td><strong>Agnes</strong></td>
-          <td>Human</td>
-          <td>
-            Rogue (Thief Archetype)
-          </td>
-          <td>Lvl 5</td>
-        </tr>
-        <tr>
-          <td><strong>Uo</strong></td>
-          <td>Tortle</td>
-          <td>
-            Ranger
-          </td>
-          <td>Lvl 2</td>
-        </tr>
-      </table>
+      <div class="table-wrapper">
+        <table id="my-characters">
+          <tr>
+            <th>Character Name</th>
+            <th>Race</th>
+            <th>Class</th>
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td><strong>Sara</strong></td>
+            <td>Human</td>
+            <td>
+              Monk (Way of the Drunken Master)
+            </td>
+            <td>Lvl 2</td>
+          </tr>
+          <tr>
+            <td><strong>Ivor</strong></td>
+            <td>Human</td>
+            <td>
+              Druid (Circle of the Shepherd)
+            </td>
+            <td>Lvl 2</td>
+          </tr>
+          <tr>
+            <td><strong>Agnes</strong></td>
+            <td>Human</td>
+            <td>
+              Rogue (Thief Archetype)
+            </td>
+            <td>Lvl 5</td>
+          </tr>
+          <tr>
+            <td><strong>Uo</strong></td>
+            <td>Tortle</td>
+            <td>
+              Ranger
+            </td>
+            <td>Lvl 2</td>
+          </tr>
+        </table>
+      </div>
 
       <figure class="dnd-picture">
         <img src="assets/img/temp.webp" alt="" />

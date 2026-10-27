@@ -115,21 +115,18 @@ button[type="submit"]:hover {
   background: var(--fern);
 }
 
-table {
-  table-layout: fixed;
+.table-wrapper {
   overflow-x: auto;
-  display: block;
 }
 
-@media (min-width: 480px) {
-  table {
-    display: inline;
-  }
+table {
+  table-layout: fixed;
 }
 
 td {
+  overflow: hidden;
   text-overflow: ellipsis; 
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .dnd-picture img {
