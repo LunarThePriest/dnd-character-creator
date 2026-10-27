@@ -71,27 +71,6 @@ function renderTable() {
   table.append(thead, tbody);
 }
 
-function updateTable(char) {
-  const tbody = document.querySelector("#my-characters tbody");
-
-  const row = document.createElement("tr");
-
-  const nameCell = document.createElement("td");
-  nameCell.textContent = char.name;
-
-  const raceCell = document.createElement("td");
-  raceCell.textContent = char.race;
-
-  const classCell = document.createElement("td");
-  classCell.textContent = char.class;
-
-  const levelCell = document.createElement("td");
-  levelCell.textContent = char.level;
-
-  row.append(nameCell, raceCell, classCell, levelCell);
-  tbody.append(row);
-}
-
 function submitForm(event) {
   event.preventDefault();
 
@@ -110,7 +89,7 @@ function submitForm(event) {
 
   characters.push(character);
   form.reset();
-  updateTable(character);
+  renderTable();
 }
 
 renderTable();
