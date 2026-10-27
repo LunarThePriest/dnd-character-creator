@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Monomakh&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sekuya&display=swap" rel="stylesheet">
+    <script src="js/app.js" defer></script>
     <title>D&D Character Creator</title>
   </head>
   <body>
@@ -109,6 +110,16 @@
             </div>
 
             <div class="form-field">
+              <label for="char-race">Race:</label>
+              <select id="char-race" name="charRace">
+                <option value="human">Human</option>
+                <option value="elf">Elf</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="tiefling">Tiefling</option>
+              </select>
+            </div>
+
+            <div class="form-field">
               <label for="char-class">Class:</label>
               <select id="char-class" name="charClass">
                 <option value="fighter">Fighter</option>
@@ -123,49 +134,45 @@
         </div>
       </container>
 
-      <h3>Common items</h3>
+      <h3>Your characters</h3>
       <table>
         <tr>
-          <th>Item Name</th>
-          <th>Rarity</th>
-          <th>Description</th>
-          <th>Estimated Value</th>
+          <th>Character Name</th>
+          <th>Race</th>
+          <th>Class</th>
+          <th>Level</th>
         </tr>
         <tr>
-          <td><strong>Everburning Torch</strong></td>
-          <td>Common</td>
+          <td><strong>Sara</strong></td>
+          <td>Human</td>
           <td>
-            A metal torch that sheds bright light in a 20-foot radius, but never
-            consumes fuel.
+            Monk (Way of the Drunken Master)
           </td>
-          <td>50 gp</td>
+          <td>Lvl 2</td>
         </tr>
         <tr>
-          <td><strong>Potion of Healing</strong></td>
-          <td>Common</td>
+          <td><strong>Ivor</strong></td>
+          <td>Human</td>
           <td>
-            A red, viscous liquid that restores 2d4 + 2 hit points when
-            consumed.
+            Druid (Circle of the Shepherd)
           </td>
-          <td>50 gp</td>
+          <td>Lvl 2</td>
         </tr>
         <tr>
-          <td><strong>Bag of Holding</strong></td>
-          <td>Uncommon</td>
+          <td><strong>Agnes</strong></td>
+          <td>Human</td>
           <td>
-            A cloth sack with an interior space significantly larger than its
-            outside dimensions, weighing only 15 pounds regardless of contents.
+            Rogue (Thief Archetype)
           </td>
-          <td>400 gp</td>
+          <td>Lvl 5</td>
         </tr>
         <tr>
-          <td><strong>Spell Scroll (Fireball)</strong></td>
-          <td>Rare</td>
+          <td><strong>Uo</strong></td>
+          <td>Tortle</td>
           <td>
-            A piece of parchment inscribed with arcane runes allowing the reader
-            to cast <em>Fireball</em> once.
+            Ranger
           </td>
-          <td>500 gp</td>
+          <td>Lvl 2</td>
         </tr>
       </table>
 
