@@ -111,6 +111,10 @@ button[type="submit"] {
   transition: background-color 0.15s;
 }
 
+button[type="submit"]:hover {
+  background: var(--fern);
+}
+
 table {
   table-layout: fixed;
   overflow-x: auto;

@@ -115,8 +115,7 @@ header {
 }
 
 .nav-menu > a:hover {
-  color: var(--carbon-black);
-  background-color: var(--lilac-ash);
+  background-color: var(--fern);
 }
 
 /* ---------- Tablet and up ---------- */
