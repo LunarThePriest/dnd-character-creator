@@ -121,12 +121,29 @@ button[type="submit"]:hover {
 
 table {
   table-layout: fixed;
+  width: 100%;
+  max-width: 40rem;
+  border-collapse: collapse;
 }
 
 td {
   overflow: hidden;
   text-overflow: ellipsis; 
   overflow-wrap: break-word;
+}
+
+th,
+td {
+  border: 1px solid var(--carbon-black);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+th {
+  background-color: var(--fern);
+  color: var(--bright-snow);
 }
 
 .dnd-picture img {
