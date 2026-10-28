@@ -25,9 +25,9 @@ class Character {
 }
 
 function initCharacters() {
-  const characters = initData.map(
-    (charData, index) => new Character(index, ...charData)
-  );
+  initData.forEach((charData, index) => {
+    characters.push(new Character(index, ...charData));
+  });
   console.log(characters);
 }
 
@@ -71,6 +71,7 @@ function submitForm(event) {
   event.preventDefault();
 
   const character = new Character(
+    characters.length,
     document.querySelector("#char-name").value,
     document.querySelector("#char-race").value,
     document.querySelector("#char-class").value,
