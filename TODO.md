@@ -2,7 +2,7 @@
 - [x] hover effect for nav buttons - change background-color
 - [x] hamburger menu for mobile!!
 - [x] fix the form
-- [ ] table (maybe remove it altogether? or repurpose it for the character sheet somehow)
+- [x] table
 - [ ] do smth with the image
 
 

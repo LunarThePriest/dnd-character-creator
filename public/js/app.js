@@ -1,29 +1,18 @@
 const form = document.querySelector("#form");
 form.addEventListener("submit", submitForm);
 
-let characters = [
-  {
-    name: "Agnes",
-    race: "Human",
-    class: "Rogue",
-    level: 5,
-  },
-  {
-    name: "Ivor",
-    race: "Human",
-    class: "Druid",
-    level: 2,
-  },
-  {
-    name: "Sara",
-    race: "Human",
-    class: "Monk",
-    level: 2,
-  },
+const initData = [
+  ["Agnes", "Human", "Rogue", 5],
+  ["Ivor", "Human", "Druid", 2],
+  ["Sara", "Human", "Monk", 2]
 ];
 
+const characters = []
+
+
 class Character {
-  constructor(charName, charRace, charClass, charLevel) {
+  constructor(id, charName, charRace, charClass, charLevel) {
+    this.id = id;
     this.name = charName.trim();
     this.race = charRace;
     this.class = charClass;
@@ -33,6 +22,13 @@ class Character {
   isValidLevel() {
     return this.level >= 1 && this.level <= 20;
   }
+}
+
+function initCharacters() {
+  const characters = initData.map(
+    (charData, index) => new Character(index, ...charData)
+  );
+  console.log(characters);
 }
 
 function renderTable() {
@@ -92,4 +88,5 @@ function submitForm(event) {
   renderTable();
 }
 
+initCharacters();
 renderTable();
