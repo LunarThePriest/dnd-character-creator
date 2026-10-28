@@ -2,9 +2,10 @@
   "name": "dnd-character-creator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -13,9 +14,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/LunarThePriest/dnd-character-creator/issues"
   },
-  "homepage": "https://github.com/LunarThePriest/dnd-character-creator#readme"
+  "homepage": "https://github.com/LunarThePriest/dnd-character-creator#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
 }
