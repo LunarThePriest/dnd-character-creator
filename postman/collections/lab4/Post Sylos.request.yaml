@@ -1,0 +1,18 @@
+$kind: http-request
+description: Get initial character list
+url: http://localhost:3000/api/items
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Sylos\",\r
+
+    \    \"race\": \"Elf\",\r
+
+    \    \"class\": \"Wizard\",\r
+
+    \    \"level\": 3\r
+
+    }"
+order: 1000

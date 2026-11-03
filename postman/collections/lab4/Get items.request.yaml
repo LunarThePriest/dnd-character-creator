@@ -1,0 +1,5 @@
+$kind: http-request
+description: Post Sylos
+url: http://localhost:3000/api/items
+method: GET
+order: 2000
