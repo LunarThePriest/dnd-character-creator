@@ -1,35 +1,31 @@
 const form = document.querySelector("#form");
 form.addEventListener("submit", submitForm);
 
-const initData = [
-  ["Agnes", "Human", "Rogue", 5],
-  ["Ivor", "Human", "Druid", 2],
-  ["Sara", "Human", "Monk", 2]
-];
 
-const characters = []
-
-
-class Character {
-  constructor(id, charName, charRace, charClass, charLevel) {
-    this.id = id;
-    this.name = charName.trim();
-    this.race = charRace;
-    this.class = charClass;
-    this.level = Number(charLevel);
+const characters = [
+  {
+    id: 1,
+    name: "Agnes",
+    race: "Human",
+    class: "Rogue",
+    level: 5
+  },
+  {
+    id: 2,
+    name: "Ivor",
+    race: "Human",
+    class: "Druid",
+    level: 2
+  },
+  {
+    id: 3,
+    name: "Sara",
+    race: "Human",
+    class: "Monk",
+    level: 2
   }
+]
 
-  isValidLevel() {
-    return this.level >= 1 && this.level <= 20;
-  }
-}
-
-function initCharacters() {
-  initData.forEach((charData, index) => {
-    characters.push(new Character(index, ...charData));
-  });
-  console.log(characters);
-}
 
 function renderTable() {
   const table = document.querySelector("#my-characters");
@@ -67,18 +63,19 @@ function renderTable() {
   table.append(thead, tbody);
 }
 
+
 function submitForm(event) {
   event.preventDefault();
 
-  const character = new Character(
-    characters.length,
-    document.querySelector("#char-name").value,
-    document.querySelector("#char-race").value,
-    document.querySelector("#char-class").value,
-    document.querySelector("#char-level").value,
-  );
-
-  if (!character.isValidLevel()) {
+  const character = {
+    id: characters.length,
+    name: document.querySelector("#char-name").value,
+    race: document.querySelector("#char-race").value,
+    class: document.querySelector("#char-class").value,
+    level: document.querySelector("#char-level").value
+  }
+  
+  if (character.level < 1 || character.level > 20) {
     document.querySelector("#message").textContent =
       "Choose only from 1 to 20.";
     return;
@@ -89,5 +86,5 @@ function submitForm(event) {
   renderTable();
 }
 
-initCharacters();
+
 renderTable();
