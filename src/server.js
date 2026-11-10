@@ -39,11 +39,11 @@ app.post('/api/items', (req, res) => {
   const { name, race, charclass, level } = req.body;
 
   if (!name || name.trim() === '') {
-    return res.status(400).json({ error: "Поле title є обов'язковим" });
+    return res.status(400).json({ error: "Поле name є обов'язковим" });
   }
 
   if (!level || level < 1 || level > 20) {
-    return res.status(400).json({ error: 'Рівень персонажа має бути від 1 до 12' });
+    return res.status(400).json({ error: 'Рівень персонажа має бути від 1 до 20' });
   }
 
   const newItem = {
