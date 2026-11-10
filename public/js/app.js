@@ -1,4 +1,7 @@
 const form = document.querySelector("#form");
+const message = document.querySelector("#message");
+const table = document.querySelector("#my-characters");
+
 form.addEventListener("submit", submitForm);
 
 
@@ -6,12 +9,11 @@ let characters = []
 
 
 function renderTable() {
-  const table = document.querySelector("#my-characters");
   table.innerHTML = "";
 
   const thead = document.createElement("thead");
   const titleRow = document.createElement("tr");
-  ["Character Name", "Race", "Class", "Level"].forEach(function (text) {
+  ["Character Name", "Race", "Class", "Level", "Action"].forEach(function (text) {
     const th = document.createElement("th");
     th.textContent = text;
     titleRow.append(th);
@@ -35,7 +37,15 @@ function renderTable() {
     const levelCell = document.createElement("td");
     levelCell.textContent = char.level;
 
-    row.append(nameCell, raceCell, classCell, levelCell);
+    const actionCell = document.createElement('td');
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('btn');
+    deleteButton.id = 'data-id'
+    deleteButton.textContent = 'Delete';
+    deleteButton.dataset.id = char.id;
+    actionCell.append(deleteButton);
+
+    row.append(nameCell, raceCell, classCell, levelCell, actionCell);
     tbody.append(row);
   });
 
@@ -55,7 +65,6 @@ async function submitForm(event) {
   }
   
 
-  const message = document.querySelector("#message");
   try {
     const response = await fetch('/api/items', {
       method: 'POST',
@@ -88,5 +97,29 @@ async function loadItems() {
     message.textContent = 'Сервер недоступний';
   }
 }
+
+table.addEventListener('click', async function (event) {
+  const deleteBtn = event.target.closest("button[data-id]");
+  if (!deleteBtn) {
+    return;
+  }
+
+  const id = deleteBtn.dataset.id;
+
+  try {
+    const response = await fetch('/api/items/' + id, { method: 'DELETE' });
+
+    if (!response.ok) {
+      message.textContent = 'Не вдалося видалити запис';
+      return;
+    }
+
+    characters = characters.filter(char => char.id !== Number(id));
+    renderTable();
+    message.textContent = 'Запис видалено';
+  } catch (error) {
+    message.textContent = 'Сервер недоступний';
+  }
+});
 
 loadItems();
